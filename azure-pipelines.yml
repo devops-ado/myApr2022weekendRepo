@@ -30,4 +30,4 @@ steps:
     azureSubscription: 'unmanaged'
     appType: 'webAppLinux'
     WebAppName: 'ado-webapp'
-    packageForLinux: '''$(Build.ArtifactStagingDirectory)/drop/**/target/*.?(war|jar)'''
+    packageForLinux: 'drop/**/**/**/*.war'
