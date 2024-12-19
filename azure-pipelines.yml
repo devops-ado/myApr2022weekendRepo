@@ -36,4 +36,4 @@ steps:
     azureSubscription: 'unmanaged'
     appType: 'webAppLinux'
     WebAppName: 'ado-webapp'
-    packageForLinux: '$(System.ArtifactsDirectory)/**/**/**/**/*.war'
+    packageForLinux: '/home/vsts/work/1/a/drop/s/MyWebApp/target/MyWebApp.war'
