@@ -24,3 +24,10 @@ steps:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: 'drop'
     publishLocation: 'Container'
+- task: AzureRmWebAppDeployment@4
+  inputs:
+    ConnectionType: 'AzureRM'
+    azureSubscription: 'unmanaged'
+    appType: 'webAppLinux'
+    WebAppName: 'ado-webapp'
+    packageForLinux: '''$(Pipeline.Workspace)/drop/**/target/*.?(war|jar)'''
