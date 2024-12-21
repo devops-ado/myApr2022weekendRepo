@@ -19,6 +19,7 @@ steps:
     targetResolveReleaseRepo: 'libs-release'
     targetResolveSnapshotRepo: 'libs-snapshot'
     artifactoryDeployService: 'AzureDevOps_ADO'
+    targetDeployReleaseRepo: 'libs-release-local'
     targetDeploySnapshotRepo: 'libs-snapshot-local'
     collectBuildInfo: true
     buildName: '$(Build.DefinitionName)'
