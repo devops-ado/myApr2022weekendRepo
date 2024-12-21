@@ -20,22 +20,15 @@ steps:
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
-- task: ArtifactoryGenericUpload@2
+- task: ArtifactoryBuildPromotion@1
   inputs:
     artifactoryService: 'ADO'
-    specSource: 'taskConfiguration'
-    fileSpec: |
-      {
-        "files": [
-          {
-            "pattern": "*.war",
-            "target": "libs-snapshot-local"
-          }
-        ]
-      }
-    collectBuildInfo: true
     buildName: '$(Build.DefinitionName)'
     buildNumber: '$(Build.BuildNumber)'
     projectKey: 'demo'
-    failNoOp: true
-    insecureTls: true
+    targetRepo: 'libs-release-local'
+    status: 'Released'
+    sourceRepo: 'libs-snapshot-local'
+    includeDependencies: false
+    copy: false
+    dryRun: false
