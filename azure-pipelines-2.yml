@@ -25,7 +25,6 @@ steps:
     artifactoryService: 'ADO'
     buildName: '$(Build.DefinitionName)'
     buildNumber: '$(Build.BuildNumber)'
-    projectKey: 'demo'
     targetRepo: 'libs-release-local'
     status: 'Released'
     sourceRepo: 'libs-snapshot-local'
