@@ -15,10 +15,10 @@ steps:
   inputs:
     mavenPomFile: 'MyWebApp/pom.xml'
     goals: 'install'
-    artifactoryResolverService: 'AzureDevOps_ADO'
+    artifactoryResolverService: 'ADO'
     targetResolveReleaseRepo: 'libs-release'
     targetResolveSnapshotRepo: 'libs-snapshot'
-    artifactoryDeployService: 'AzureDevOps_ADO'
+    artifactoryDeployService: 'ADO'
     targetDeployReleaseRepo: 'libs-release-local'
     targetDeploySnapshotRepo: 'libs-snapshot-local'
     collectBuildInfo: true
